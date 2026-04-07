@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 require("dotenv").config(); 
 const todoRoutes = require("./routes/todoRoutes"); 
 const app = express(); 
-app.use(cors({ origin: ["http://localhost:3000","https://todobysuri.netlify.app/"] })); 
+app.use(cors()); 
 app.use(express.json()); 
 app.use("/todos", todoRoutes); 
 mongoose 
